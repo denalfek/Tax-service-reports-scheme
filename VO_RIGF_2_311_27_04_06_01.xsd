@@ -1,0 +1,2103 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by Shakeev (FGUP GNIVC FNS Russia) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Home (Home) -->
+<xs:schema
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:doc="urn:exch:document:1.0" 
+ xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:egrip">
+	<xs:element name="‘айл">
+		<xs:annotation>
+			<xs:documentation>—ведени¤, содержащиес¤ в ≈дином государственном реестре индивидуальных предпринимателей</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="»дќтпр" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>—ведени¤ об отправителе</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="‘»ќќтв" type="‘»ќ1“ип">
+								<xs:annotation>
+									<xs:documentation>‘амили¤, им¤, отчество ответственного лица</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ƒолжќтв" use="optional">
+							<xs:annotation>
+								<xs:documentation>ƒолжность ответственного лица</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="100"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="“лф" use="optional">
+							<xs:annotation>
+								<xs:documentation>Ќомер контактного телефона</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="E-mail" use="optional">
+							<xs:annotation>
+								<xs:documentation>E-mail</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="45"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ƒокумент" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>—остав и структура документа</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="—в»ѕ">
+								<xs:annotation>
+									<xs:documentation>—ведени¤ об индивидуальном предпринимателе / кресть¤нском (фермерском) хоз¤йстве</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="—в‘Ћ">
+											<xs:annotation>
+												<xs:documentation>‘амили¤, им¤, отчество и пол индивидуального предпринимател¤ или главы  ‘’</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="‘»ќ–ус" type="‘»ќ1“ип">
+														<xs:annotation>
+															<xs:documentation>‘амили¤, им¤, отчество физического лица на русском ¤зыке</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="‘»ќЋат" type="‘»ќ1“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>‘амили¤, им¤, отчество физического лица с использованием букв латинского алфавита</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ѕол" use="required">
+													<xs:annotation>
+														<xs:documentation>ѕол</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:length value="1"/>
+															<xs:enumeration value="1"/>
+															<xs:enumeration value="2"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в‘»ќ«ј√—" type="—в‘»ќ«ј√—“ип" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о фамилии, имени, отчестве индивидуального предпринимател¤ или главы  ‘’ по данным «ј√—</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="—в–ожд" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о рождении</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ƒата–ожд" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата рождени¤</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ћесто–ожд" use="optional">
+													<xs:annotation>
+														<xs:documentation>ћесто рождени¤</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="255"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ѕрƒата–ожд" use="optional">
+													<xs:annotation>
+														<xs:documentation>ѕризнак полноты представл¤емой даты рождени¤ физического лица</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:length value="1"/>
+															<xs:enumeration value="1"/>
+															<xs:enumeration value="2"/>
+															<xs:enumeration value="3"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в√ражд">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о гражданстве</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="¬ид√ражд" use="required">
+													<xs:annotation>
+														<xs:documentation>¬ид гражданства</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:length value="1"/>
+															<xs:enumeration value="1"/>
+															<xs:enumeration value="2"/>
+															<xs:enumeration value="3"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ќ —ћ" type="ќ —ћ“ип" use="optional">
+													<xs:annotation>
+														<xs:documentation> од страны, гражданином которой ¤вл¤етс¤ физическое лицо</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="Ќаим—тран" use="optional">
+													<xs:annotation>
+														<xs:documentation>Ќаименование страны по справочнику ќ —ћ, гражданином которой ¤вл¤етс¤ физическое лицо</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="250"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в”дЋичн‘Ћ" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о документе, удостовер¤ющем личность физического лица</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="”дЋичн‘Ћ" type="”дЋичн“ип–">
+														<xs:annotation>
+															<xs:documentation>ƒанные документа, удостовер¤ющего личность</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—вѕрав∆ит–‘" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о документе, подтверждающем право иностранного гражданина или лица без гражданства временно или посто¤нно проживать на территории –оссийской ‘едерации</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ƒокѕрав∆ит–‘" type="”дЋичн“ип–">
+														<xs:annotation>
+															<xs:documentation>¬ид и данные документа, подтверждающего право физического лица временно или посто¤нно проживать на территории –оссийской ‘едерации</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="—рокƒействƒок" type="xs:date" use="optional">
+													<xs:annotation>
+														<xs:documentation>—рок действи¤ документа</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—вјдрћ∆" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ об адресе (месте жительства) индивидуального предпринимател¤ или главы  ‘’</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="јдрес–‘" type="јдр–‘“ип¬ып" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>јдрес (место жительства) индивидуального предпринимател¤ или главы  ‘’ (в структуре  Ћјƒ–)</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="јдрћ∆‘»ј—" type="јдр‘»ј—≈√–»ѕ“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>јдрес (место жительства) индивидуального предпринимател¤ или главы  ‘’ (в структуре ‘»ј—)</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="¬идјдр лассиф" use="optional">
+													<xs:annotation>
+														<xs:documentation>¬ид адресного классификатора, используемого при формировании в выписках сведений об адресе</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:length value="1"/>
+															<xs:enumeration value="1"/>
+															<xs:enumeration value="2"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—вјдрЁлѕочты" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ об адресе электронной почты индивидуального предпринимател¤ или кресть¤нского (фермерского) хоз¤йства</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="E-mail" use="required">
+													<xs:annotation>
+														<xs:documentation>јдрес электронной почты индивидуального предпринимател¤ или кресть¤нского (фермерского) хоз¤йства</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="45"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в–ег»ѕ">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о регистрации индивидуального предпринимател¤ или кресть¤нского (фермерского) хоз¤йства</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="—в ‘’" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о кресть¤нском (фермерском) хоз¤йстве, созданном до 1 ¤нвар¤ 1995 года, содержащиес¤ в ≈√–ёЋ</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="ќ√–Ќ" type="ќ√–Ќ“ип" use="required">
+																<xs:annotation>
+																	<xs:documentation>ќ√–Ќ юридического лица</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="»ЌЌ" type="»ЌЌёЋ“ип" use="optional">
+																<xs:annotation>
+																	<xs:documentation>»ЌЌ юридического лица</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="ЌаимёЋѕолн" use="required">
+																<xs:annotation>
+																	<xs:documentation>ѕолное наименование юридического лица</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="1"/>
+																		<xs:maxLength value="1000"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="ќ√–Ќ»ѕ" type="ќ√–Ќ»ѕ“ип" use="required">
+													<xs:annotation>
+														<xs:documentation>ќсновной государственный регистрационный номер</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒатаќ√–Ќ»ѕ" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата присвоени¤ ќ√–Ќ»ѕ</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="–егЌом" use="optional">
+													<xs:annotation>
+														<xs:documentation>–егистрационный номер, присвоенный до 1 ¤нвар¤ 2004 года</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="255"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ƒата–ег" type="xs:date" use="optional">
+													<xs:annotation>
+														<xs:documentation>ƒата регистрации до 1 ¤нвар¤ 2004 года</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="Ќаим–ќ" use="optional">
+													<xs:annotation>
+														<xs:documentation>Ќаименование органа, зарегистрировавшего »ѕ или  ‘’ до 1 ¤нвар¤ 2004 года</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="3"/>
+															<xs:maxLength value="255"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в√л ‘’" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о том, что в ≈√–»ѕ внесены данные о том, что индивидуальный предприниматель ¤вл¤етс¤ главой  ‘’</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="“екст√л ‘’" use="required">
+													<xs:annotation>
+														<xs:documentation>“екст о том, что индивидуальный предприниматель ¤вл¤етс¤ главой кресть¤нского (фермерского) хоз¤йства</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="250"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в–егќрг">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о регистрирующем органе по месту жительства индивидуального предпринимател¤ или главы  ‘’</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name=" одЌќ" type="—ќЌќ“ип" use="required">
+													<xs:annotation>
+														<xs:documentation> од органа по справочнику —ќ”Ќ</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ЌаимЌќ" use="required">
+													<xs:annotation>
+														<xs:documentation>Ќаименование регистрирующего (налогового) органа</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="10"/>
+															<xs:maxLength value="250"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="јдр–ќ" use="optional">
+													<xs:annotation>
+														<xs:documentation>јдрес регистрирующего органа</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="10"/>
+															<xs:maxLength value="255"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в—татус" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о состо¤нии (статусе) индивидуального предпринимател¤,  ‘’</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="—в—татус">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о правоспособности (статусе) индивидуального предпринимател¤,  ‘’</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:attribute name=" од—татус" use="required">
+																<xs:annotation>
+																	<xs:documentation> од статуса по справочнику —»ѕ—“</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:length value="3"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Ќаим—татус" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќаименование статуса по справочнику —»ѕ—“ (состо¤ние)</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="5"/>
+																		<xs:maxLength value="500"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="—в–еш»скл»ѕ" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о решении о предсто¤щем исключении индивидуального предпринимател¤ из ≈√–»ѕ и его публикации</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:attribute name="ƒата–еш" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>ƒата решени¤</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="Ќомер–еш" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќомер решени¤</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="1"/>
+																		<xs:maxLength value="255"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="ƒатаѕубликации" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>ƒата публикации решени¤ </xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="Ќомер∆урнала" use="optional">
+																<xs:annotation>
+																	<xs:documentation>Ќомер журнала, в котором опубликовано решение</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="1"/>
+																		<xs:maxLength value="50"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—вѕрекращ" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о прекращении де¤тельности в качестве индивидуального предпринимател¤ или о прекращении  ‘’</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="—в—татус">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о способе прекращени¤</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:attribute name=" од—татус" use="required">
+																<xs:annotation>
+																	<xs:documentation> од способа прекращени¤ по справочнику —»ѕѕƒ</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:length value="3"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Ќаим—татус" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќаименование способа прекращени¤ по справочнику —»ѕѕƒ</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="5"/>
+																		<xs:maxLength value="500"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="ƒатаѕрекращ" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>ƒата прекращени¤</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="—вЌовёЋ" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о юридическом лице, созданном на базе кресть¤нского (фермерского) хоз¤йства</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="ќ√–Ќ" type="ќ√–Ќ“ип" use="required">
+																<xs:annotation>
+																	<xs:documentation>ќсновной государственный регистрационный номер юридического лица, созданного на базе имущества кресть¤нского (фермерского) хоз¤йства</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="»ЌЌ" type="»ЌЌёЋ“ип" use="optional">
+																<xs:annotation>
+																	<xs:documentation>»ЌЌ юридического лица</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="ЌаимёЋѕолн" use="required">
+																<xs:annotation>
+																	<xs:documentation>ѕолное наименование юридического лица</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="1"/>
+																		<xs:maxLength value="1000"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в”четЌќ" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ об учете в налоговом органе</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:annotation>
+														<xs:documentation/>
+													</xs:annotation>
+													<xs:element name="—вЌќ">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о налоговом органе, в котором »ѕ (глава  ‘’) состоит (дл¤ »ѕ ( ‘’), прекративших де¤тельность - состо¤ли) на учете</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:attribute name=" одЌќ" type="—ќЌќ“ип" use="required">
+																<xs:annotation>
+																	<xs:documentation> од органа по справочнику —ќ”Ќ</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="ЌаимЌќ" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќаименование налогового органа</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="10"/>
+																		<xs:maxLength value="250"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="»ЌЌ‘Ћ" type="»ЌЌ‘Ћ“ип" use="required">
+													<xs:annotation>
+														<xs:documentation>»ЌЌ физического лица</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒатаѕост”ч" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата постановки на учет в налоговом органе</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в–егѕ‘" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о регистрации в качестве страховател¤ по об¤зательному пенсионному страхованию (ќѕ—)</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="—вќргѕ‘" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о территориальном органе ѕенсионного фонда –оссийской ‘едерации / об органе в сфере социального страховани¤ –оссийской ‘едерации</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:attribute name=" одѕ‘" use="required">
+																<xs:annotation>
+																	<xs:documentation> од органа</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="2"/>
+																		<xs:maxLength value="10"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Ќаимѕ‘" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќаименование</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="10"/>
+																		<xs:maxLength value="255"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="–егЌомѕ‘" use="required">
+													<xs:annotation>
+														<xs:documentation>–егистрационный номер в территориальном органе ѕенсионного фонда –оссийской ‘едерации / ≈диный регистрационный номер страховател¤</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="15"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ƒатаѕрисвЌом" type="xs:date" use="optional">
+													<xs:annotation>
+														<xs:documentation>ƒата присвоени¤ единого регистрационного номера страховател¤</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒата–ег" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата регистрации / постановки на учет индивидуального предпринимател¤ (главы  ‘’) в качестве страховател¤</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в–ег‘——" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о регистрации в качестве страховател¤ по об¤зательному социальному страхованию (ќ——)</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="—вќрг‘——" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ об исполнительном органе ‘онда социального страховани¤ –оссийской ‘едерации / об органе в сфере социального страховани¤ –оссийской ‘едерации</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:attribute name=" од‘——" use="required">
+																<xs:annotation>
+																	<xs:documentation> од органа</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="2"/>
+																		<xs:maxLength value="10"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Ќаим‘——" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќаименование</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="10"/>
+																		<xs:maxLength value="255"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="–егЌом‘——" use="required">
+													<xs:annotation>
+														<xs:documentation>–егистрационный номер в исполнительном органе ‘онда социального страховани¤ –оссийской ‘едерации / ≈диный регистрационный номер страховател¤</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="15"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ƒатаѕрисвЌом" type="xs:date" use="optional">
+													<xs:annotation>
+														<xs:documentation>ƒата присвоени¤ единого регистрационного номера страховател¤</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒата–ег" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата регистрации / постановки на учет индивидуального предпринимател¤ (главы  ‘’) в качестве страховател¤ </xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒата—н–ег" type="xs:date" use="optional">
+													<xs:annotation>
+														<xs:documentation>ƒата сн¤ти¤ индивидуального предпринимател¤ (главы  ‘’) в качестве страховател¤</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—вќ ¬Ёƒ" type="—вќ ¬Ёƒ≈√–»ѕ“ип" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о видах экономической де¤тельности по ќбщероссийскому классификатору видов экономической де¤тельности</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="—вЋицензи¤" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о лицензи¤х, выданных индивидуальному предпринимателю</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ЌаимЋиц¬идƒе¤т" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Ќаименование лицензируемого вида де¤тельности, на который выдана лицензи¤</xs:documentation>
+														</xs:annotation>
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:minLength value="1"/>
+																<xs:maxLength value="1000"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="Ћицќрг¬ыдЋиц" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Ќаименование лицензирующего органа, выдавшего или переоформившего лицензию</xs:documentation>
+														</xs:annotation>
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:minLength value="1"/>
+																<xs:maxLength value="1000"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="—вѕриостЋиц" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о приостановлении действи¤ лицензии</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="ƒатаѕриостЋиц" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>ƒата приостановлени¤ действи¤ лицензии</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="ЋицќргѕриостЋиц" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќаименование лицензирующего органа, приостановившего действие лицензии</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="1"/>
+																		<xs:maxLength value="1000"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Ќомер≈–”Ћ" use="optional">
+													<xs:annotation>
+														<xs:documentation>Ќомер лицензии, присвоенный в ≈дином реестре учета лицензий</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="100"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ЌомЋиц" use="optional">
+													<xs:annotation>
+														<xs:documentation>—ери¤ и номер лицензии</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:minLength value="1"/>
+															<xs:maxLength value="100"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="ƒатаЋиц" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата лицензии</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒатаЌачЋиц" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата начала действи¤ лицензии</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒатаќкончЋиц" type="xs:date" use="optional">
+													<xs:annotation>
+														<xs:documentation>ƒата окончани¤ действи¤ лицензии</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="—в«ап≈√–»ѕ" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>—ведени¤ о запис¤х, внесенных в ≈√–»ѕ</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="¬ид«ап" type="¬ид«ап“ип">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о причине внесени¤ записи в ≈√–»ѕ</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="—в–егќрг" type="—в–егќрг“ип">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о регистрирующем (налоговом) органе, внесшем запись в ≈√–»ѕ</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="—ведѕредƒок" minOccurs="0" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о документах, представленных при внесении записи в ≈√–»ѕ</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Ќаимƒок">
+																	<xs:annotation>
+																		<xs:documentation>Ќаименование документа</xs:documentation>
+																	</xs:annotation>
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:maxLength value="255"/>
+																			<xs:minLength value="1"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="Ќомƒок" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Ќомер документа</xs:documentation>
+																	</xs:annotation>
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:maxLength value="255"/>
+																			<xs:minLength value="1"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="ƒатаƒок" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>ƒата документа</xs:documentation>
+																	</xs:annotation>
+																	<xs:simpleType>
+																		<xs:restriction base="xs:date">
+																			<xs:minInclusive value="1900-01-01"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="—в—вид" minOccurs="0" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о свидетельстве, подтверждающем факт внесени¤ записи в ≈√–»ѕ</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="√–Ќ»ѕƒата—видЌед" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей сведени¤ о признании свидетельства недействительным по решению суда </xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="—ери¤" use="required">
+																<xs:annotation>
+																	<xs:documentation>—ери¤ бланка свидетельства</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:length value="2"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Ќомер" use="required">
+																<xs:annotation>
+																	<xs:documentation>Ќомер бланка свидетельства</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:minLength value="7"/>
+																		<xs:maxLength value="9"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="ƒата¬ыд—вид" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>ƒата выдачи свидетельства </xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒата»спрѕред" type="»д√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата записи, в которую внесены исправлени¤</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="√–Ќ»ѕƒатаЌедѕред" type="»д√–Ќ»ѕƒата“ип" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>√–Ќ и дата записи, котора¤ признана недействительной</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="—в—татус«ап" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>—ведени¤ о статусе записи</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="√–Ќ»ѕƒатаЌед" type="»д√–Ќ»ѕƒата“ип" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата внесени¤ записи, которой запись признана недействительной</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="√–Ќ»ѕƒата»спр" type="»д√–Ќ»ѕƒата“ип" minOccurs="0" maxOccurs="unbounded">
+																	<xs:annotation>
+																		<xs:documentation>√–Ќ и дата записи, которой внесены исправлени¤ в св¤зи с технической ошибкой</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="»д«ап" use="required">
+													<xs:annotation>
+														<xs:documentation>—истемный идентификатор записи</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:integer">
+															<xs:totalDigits value="19"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="√–Ќ»ѕ" type="ќ√–Ќ»ѕ“ип" use="optional">
+													<xs:annotation>
+														<xs:documentation>√осударственный регистрационный номер записи</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ƒата«ап" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>ƒата внесени¤ записи в ≈√–»ѕ</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="ƒата¬ып" type="xs:date" use="optional">
+										<xs:annotation>
+											<xs:documentation>ƒата формировани¤ сведений из ≈√–»ѕ в отношении индивидуального предпринимател¤</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="ќ√–Ќ»ѕ" type="ќ√–Ќ»ѕ“ип" use="required">
+										<xs:annotation>
+											<xs:documentation>ќсновной государственный регистрационный номер индивидуального предпринимател¤</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="ƒатаќ√–Ќ»ѕ" type="xs:date" use="required">
+										<xs:annotation>
+											<xs:documentation>ƒата присвоени¤ ќ√–Ќ»ѕ</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="»ЌЌ‘Ћ" type="»ЌЌ‘Ћ“ип" use="optional">
+										<xs:annotation>
+											<xs:documentation>»ЌЌ физического лица</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name=" од¬ид»ѕ" use="required">
+										<xs:annotation>
+											<xs:documentation> од вида предпринимательства: индивидуальный предприниматель / кресть¤нское (фермерское) хоз¤йство</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:length value="1"/>
+												<xs:enumeration value="1"/>
+												<xs:enumeration value="2"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="Ќаим¬ид»ѕ" use="required">
+										<xs:annotation>
+											<xs:documentation>Ќаименование вида предпринимательства: индивидуальный предприниматель / кресть¤нское (фермерское) хоз¤йство</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="10"/>
+												<xs:maxLength value="50"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="»дƒок" use="required">
+							<xs:annotation>
+								<xs:documentation>»дентификатор документа</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:length value="36"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="»д‘айл" use="required">
+				<xs:annotation>
+					<xs:documentation>»дентификатор файла</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="¬ерс‘орм" use="required">
+				<xs:annotation>
+					<xs:documentation>¬ерси¤ формата</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="5"/>
+						<xs:enumeration value="4.06"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="“ип»нф" use="required">
+				<xs:annotation>
+					<xs:documentation>“ип информации</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="50"/>
+						<xs:enumeration value="≈√–»ѕ_ќ“ –_—¬≈ƒ"/>
+						<xs:enumeration value="≈√–»ѕ_«ј –_—¬≈ƒ"/>
+						<xs:enumeration value="≈√–»ѕ_ќ√–_—¬≈ƒ"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="¬ерсѕрог" use="optional">
+				<xs:annotation>
+					<xs:documentation>¬ерси¤ передающей программы</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name=" олƒок" use="required">
+				<xs:annotation>
+					<xs:documentation> оличество документов</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="5"/>
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="јдр–‘“ип¬ып">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресе в –‘ в структуре  Ћјƒ–, содержащиес¤ в ≈√–»ѕ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="–егион" type="–егион“ип">
+				<xs:annotation>
+					<xs:documentation>—убъект –оссийской ‘едерации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="–айон" type="–айон“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>–айон (улус и т.п.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="√ород" type="√ород“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>√ород (волость и т.п.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ќаселѕункт" type="Ќаселѕункт“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ќаселенный пункт (село и т.п.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="”лица" type="”лица“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>”лица (проспект, переулок и т.п.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="»ндекс" use="optional">
+			<xs:annotation>
+				<xs:documentation>»ндекс</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="6"/>
+					<xs:pattern value="[0-9]{6}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name=" од–егион" use="required">
+			<xs:annotation>
+				<xs:documentation> од субъекта –оссийской ‘едерации</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="CC–‘“ип"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name=" одјдр ладр" use="optional">
+			<xs:annotation>
+				<xs:documentation> од адреса по  Ћјƒ–</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="11"/>
+					<xs:maxLength value="23"/>
+					<xs:pattern value="[0-9]{11}"/>
+					<xs:pattern value="[0-9]{15}"/>
+					<xs:pattern value="[0-9]{19}"/>
+					<xs:pattern value="[0-9]{23}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ƒом" use="optional">
+			<xs:annotation>
+				<xs:documentation>ƒом (владение и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name=" орпус" use="optional">
+			<xs:annotation>
+				<xs:documentation> орпус (строение и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name=" варт" use="optional">
+			<xs:annotation>
+				<xs:documentation> вартира (офис и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="јдр‘»ј—≈√–»ѕ“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресе в –‘ в структуре ‘»ј—, содержащиес¤ в ≈√–»ѕ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="–егион" type="CC–‘“ип">
+				<xs:annotation>
+					<xs:documentation>—убъект –оссийской ‘едерации (код)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ќаим–егион">
+				<xs:annotation>
+					<xs:documentation>Ќаименование субъекта –оссийской ‘едерации</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ћуницип–айон" type="¬идЌаим од“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ћуниципальный район/ городской округ/ внутригородска¤ территори¤ города федерального значени¤/ муниципальный округ/ федеральна¤ территори¤</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="√ород—елѕоселен" type="¬идЌаим од“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>√ородское поселение / сельское поселение / межселенна¤ территори¤ в составе муниципального района / внутригородской район городского округа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ќаселенѕункт" type="¬идЌаимѕ“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ќаселенный пункт (город, деревн¤, село и прочее)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ёлѕлан—труктур" type="“ипЌаимѕ“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ёлемент планировочной структуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ёл”лƒор—ети" type="“ипЌаимѕ“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ёлемент улично-дорожной сети</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="«дание" type="Ќомерѕ“ип" minOccurs="0" maxOccurs="3">
+				<xs:annotation>
+					<xs:documentation>«дание / сооружение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ѕомещ«дани¤" type="Ќомерѕ“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ѕомещение в пределах здани¤, сооружени¤</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ѕомещ вартиры" type="Ќомерѕ“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ѕомещение в пределах квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="»дЌом" use="optional">
+			<xs:annotation>
+				<xs:documentation>”никальный идентификатор адресного объекта в √ј–</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="36"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="»ндекс" use="optional">
+			<xs:annotation>
+				<xs:documentation>»ндекс</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="6"/>
+					<xs:pattern value="[0-9]{6}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="¬ид«ап“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о причине внесени¤ записи в реестр (≈√–ёЋ/≈√–»ѕ)</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name=" од—ѕ¬«" use="required">
+			<xs:annotation>
+				<xs:documentation> од вида записи (причины внесени¤ записи в ≈√–ёЋ или ≈√–»ѕ) по справочнику —ѕ¬«</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="5"/>
+					<xs:pattern value="[0-9]{5}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим¬ид«ап" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование вида записи (причины внесени¤ записи в ≈√–ёЋ или ≈√–»ѕ) </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="5"/>
+					<xs:maxLength value="500"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="¬идЌаим од“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о виде (код) и наименовании адресного элемента</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="¬ид од" use="required">
+			<xs:annotation>
+				<xs:documentation>¬ид (код) элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="¬идЌаимѕ“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о виде и наименовании адресного элемента</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="¬ид" use="required">
+			<xs:annotation>
+				<xs:documentation>¬ид элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="“ипЌаимѕ“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о типе и наименовании адресного элемента</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ип" use="required">
+			<xs:annotation>
+				<xs:documentation>“ип элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Ќомерѕ“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о номере адресного элемента</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ип" use="required">
+			<xs:annotation>
+				<xs:documentation>“ип элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќомер" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќомер элемента</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="√ород“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресообразующем элементе город</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ип√ород" use="required">
+			<xs:annotation>
+				<xs:documentation>“ип элемента город (город, волость и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим√ород" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование (элемент город) </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="√–Ќ»ѕƒата“ип">
+		<xs:annotation>
+			<xs:documentation>√–Ќ и дата внесени¤ записи в ≈√–»ѕ</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="√–Ќ»ѕ" type="ќ√–Ќ»ѕ“ип" use="optional">
+			<xs:annotation>
+				<xs:documentation>√осударственный регистрационный номер записи ≈√–»ѕ</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ƒата«аписи" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>ƒата внесени¤ записи в ≈√–»ѕ</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="»д√–Ќ»ѕƒата“ип">
+		<xs:annotation>
+			<xs:documentation>»дентификатор записи, √–Ќ»ѕ и дата внесени¤ записи в ≈√–»ѕ</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="»д«ап" use="required">
+			<xs:annotation>
+				<xs:documentation>—истемный идентификатор записи</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:totalDigits value="19"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="√–Ќ»ѕ" type="ќ√–Ќ»ѕ“ип" use="optional">
+			<xs:annotation>
+				<xs:documentation>√осударственный регистрационный номер записи</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ƒата«ап" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>ƒата внесени¤ записи в ≈√–»ѕ</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Ќаселѕункт“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресообразующем элементе населенный пункт</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ипЌаселѕункт" use="optional">
+			<xs:annotation>
+				<xs:documentation>“ип элемента населенный пункт (поселок, село и т.п.)</xs:documentation>
+				<xs:documentation/>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ЌаимЌаселѕункт" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование (элемент населенный пункт)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="–айон“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресообразующем элементе район</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ип–айон" use="required">
+			<xs:annotation>
+				<xs:documentation>“ип элемента район (район, улус и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим–айон" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование (элемент район)  </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="–егион“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресообразующем элементе регион</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ип–егион" use="optional">
+			<xs:annotation>
+				<xs:documentation>“ип элемента регион (республика, край и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="30"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим–егион" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование (элемент регион)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="—вќ ¬Ёƒ≈√–»ѕ“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о кодах по ќбщероссийскому классификатору видов экономической де¤тельности</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="—вќ ¬Ёƒќсн" type="—вќ ¬Ёƒ“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>—ведени¤ об основном виде де¤тельности</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="—вќ ¬Ёƒƒоп" type="—вќ ¬Ёƒ“ип" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>—ведени¤ о дополнительном виде де¤тельности</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="—вќ ¬Ёƒ“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о виде де¤тельности, содержащиес¤ в ≈√–»ѕ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+				<xs:annotation>
+					<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="—вƒол¤ќ ¬Ёƒ" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>—ведени¤ о доле данного вида де¤тельности в де¤тельности индивидуального предпринимател¤ и/или о дополнительных сведени¤х</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+							<xs:annotation>
+								<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="ƒоп—ведќ ¬Ёƒ" use="required">
+						<xs:annotation>
+							<xs:documentation>ƒополнительные сведени¤ о виде де¤тельности</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="1"/>
+								<xs:enumeration value="1"/>
+								<xs:enumeration value="2"/>
+								<xs:enumeration value="3"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="ѕроцент" use="optional">
+						<xs:annotation>
+							<xs:documentation>–азмер доли кода ќ ¬Ёƒ в де¤тельности »ѕ в процентах</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:decimal">
+								<xs:totalDigits value="5"/>
+								<xs:fractionDigits value="2"/>
+								<xs:minInclusive value="0"/>
+								<xs:maxInclusive value="100"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name=" одќ ¬Ёƒ" type="ќ ¬Ёƒ“ип" use="required">
+			<xs:annotation>
+				<xs:documentation> од по ќбщероссийскому классификатору видов экономической де¤тельности</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Ќаимќ ¬Ёƒ" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование вида де¤тельности по ќбщероссийскому классификатору видов экономической де¤тельности</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="1000"/>
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ѕр¬ерсќ ¬Ёƒ" use="optional">
+			<xs:annotation>
+				<xs:documentation>ѕризнак версии ќбщероссийского классификатора видов экономической де¤тельности</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="4"/>
+					<xs:enumeration value="2001"/>
+					<xs:enumeration value="2014"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="—в–егќрг“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о регистрирующем органе</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name=" одЌќ" type="—ќЌќ“ип" use="required">
+			<xs:annotation>
+				<xs:documentation> од органа по справочнику —ќ”Ќ</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ЌаимЌќ" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование регистрирующего (налогового) органа</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="10"/>
+					<xs:maxLength value="250"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="”дЋичн“ип–">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о документе, удостовер¤ющем личность</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name=" од¬идƒок" type="—ѕƒ”Ћ“ип" use="required">
+			<xs:annotation>
+				<xs:documentation> од вида документа по справочнику —ѕƒ”Ћ </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Ќаимƒок" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование документа по справочнику —ѕƒ”Ћ</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="150"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="—ерЌомƒок" use="required">
+			<xs:annotation>
+				<xs:documentation>—ери¤ и номер документа</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ƒатаƒок" type="xs:date" use="optional">
+			<xs:annotation>
+				<xs:documentation>ƒата выдачи документа</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="¬ыдƒок" use="optional">
+			<xs:annotation>
+				<xs:documentation> ем выдан документ</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="1000"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name=" од¬ыдƒок" use="optional">
+			<xs:annotation>
+				<xs:documentation> од подразделени¤, выдавшего документ</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="7"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="—в‘»ќ«ј√—“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ о фамилии, имени, отчестве физического лица по данным «ј√—</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="√–Ќ»ѕƒата" type="√–Ќ»ѕƒата“ип">
+				<xs:annotation>
+					<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи, содержащей указанные сведени¤</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="√–Ќ»ѕƒата»спр" type="√–Ќ»ѕƒата“ип" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>√–Ќ и дата внесени¤ в ≈√–»ѕ записи об исправлении технической ошибки в указанных сведени¤х</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="‘амили¤" use="optional">
+			<xs:annotation>
+				<xs:documentation>‘амили¤</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="»м¤" use="optional">
+			<xs:annotation>
+				<xs:documentation>»м¤</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ќтчество" use="optional">
+			<xs:annotation>
+				<xs:documentation>ќтчество</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="”лица“ип">
+		<xs:annotation>
+			<xs:documentation>—ведени¤ об адресообразующем элементе улица</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="“ип”лица" use="optional">
+			<xs:annotation>
+				<xs:documentation>“ип адресного объекта улица (улица, проспект, переулок и т.п.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ќаим”лица" use="required">
+			<xs:annotation>
+				<xs:documentation>Ќаименование (элемент улица) </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="‘»ќ1“ип">
+		<xs:annotation>
+			<xs:documentation>‘амили¤, им¤, отчество</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="‘амили¤" use="optional">
+			<xs:annotation>
+				<xs:documentation>‘амили¤</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="»м¤" use="optional">
+			<xs:annotation>
+				<xs:documentation>»м¤</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ќтчество" use="optional">
+			<xs:annotation>
+				<xs:documentation>ќтчество</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="»ЌЌ‘Ћ“ип">
+		<xs:annotation>
+			<xs:documentation>»дентификационный номер налогоплательщика - физического лица</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="12"/>
+			<xs:pattern value="([0-9]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{10}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="»ЌЌёЋ“ип">
+		<xs:annotation>
+			<xs:documentation>»дентификационный номер налогоплательщика - организации</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="10"/>
+			<xs:pattern value="([0-9]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ќ√–Ќ“ип">
+		<xs:annotation>
+			<xs:documentation>ќсновной  государственный регистрационный номер юридического лица  </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="13"/>
+			<xs:pattern value="[0-9]{13}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ќ√–Ќ»ѕ“ип">
+		<xs:annotation>
+			<xs:documentation>ќсновной государственный регистрационный номер индивидуального предпринимател¤</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="15"/>
+			<xs:pattern value="[0-9]{15}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ќ ¬Ёƒ“ип">
+		<xs:annotation>
+			<xs:documentation> од из ќбщероссийского классификатора видов экономической де¤тельности</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="8"/>
+			<xs:minLength value="2"/>
+			<xs:pattern value="[0-9]{2}"/>
+			<xs:pattern value="[0-9]{2}\.[0-9]{1}"/>
+			<xs:pattern value="[0-9]{2}\.[0-9]{2}"/>
+			<xs:pattern value="[0-9]{2}\.[0-9]{2}\.[0-9]{1}"/>
+			<xs:pattern value="[0-9]{2}\.[0-9]{2}\.[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ќ —ћ“ип">
+		<xs:annotation>
+			<xs:documentation> од из ќбщероссийского классификатора стран мира</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="3"/>
+			<xs:pattern value="[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="—ќЌќ“ип">
+		<xs:annotation>
+			<xs:documentation> оды из  лассификатора системы обозначений налоговых органов</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+			<xs:pattern value="[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="—ѕƒ”Ћ“ип">
+		<xs:annotation>
+			<xs:documentation> оды —правочника видов документов, удостовер¤ющих личность налогоплательщика</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="2"/>
+			<xs:pattern value="[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CC–‘“ип">
+		<xs:annotation>
+			<xs:documentation> од из —правочника субъектов –оссийской ‘едерации </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="2"/>
+			<xs:pattern value="[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
